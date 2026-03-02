@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .btn{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: none;
+        background:white;
+        /* cursor: pointer; */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        transition: transform 0.6s ease;
+        position: absolute;
+        
+        
+      }
+
+       #dark.active{
+        
+        background:white;
+        border: none;
+
+
+      }
+      #dark.active .btn 
+      {
+        transform: translateX(100px);
+        background-color: black;
+      }
+      #dark
+      {
+        height: 100px;
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 60px;
+        position: relative;
+        background: #000;
+       
+      
+      }
+      .bodydark
+      {
+        background: #000;
+      }
+    </style>
+</head>
+<body>
+    <div id="dark">
+    <button class="btn">🌙</button></div>
+    <script>
+        const btn=document.querySelector(".btn")
+        const dark=document.getElementById("dark")
+        btn.addEventListener("click",function(){
+            dark.classList.toggle("active")
+            document.body.classList.toggle("bodydark")
+            if(dark.classList.contains("active"))
+        {
+            btn.textContent="☀️"
+        }
+        else
+        {
+            btn.textContent="🌙"
+        }
+        })
+        
+    
+    </script>
+</body>
+</html>
