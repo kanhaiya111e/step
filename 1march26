@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar
+        {
+            height: 60px;
+            background-color:black;
+            padding: 10px;
+
+
+            
+        }
+        .dropdown
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         
+           
+        }
+        .dropdown li{
+            color:white;
+            list-style:none;
+       
+            
+        }
+        
+        .toggle
+        {
+          display: none;
+          color: white;
+          text-align: center;
+          font-size: 1.2rem;
+          
+
+          border: 1px solid white;
+          border-radius: 10px;
+          width: 90px;
+          padding: 5px;
+          height: 40px;
+        }
+        @media(max-width:1000px)
+        {
+            .dropdown
+            {
+                display: none;
+                flex-direction: column;
+                width: 150px;
+                position: absolute;
+                top: 60px;
+                left: 10px;
+                
+            
+            }
+            .dropdown li {
+                color: black;
+                width: 100%;
+                text-align: center;
+            }
+            .dropdown li:hover
+            {
+                background-color: gray;
+            }
+            
+            .dropdown.active
+            {
+                display: flex;
+                background-color: #fff;
+                border: 1px solid black;
+
+                
+
+            }
+            .toggle
+            {
+                display: block;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="dropdown">
+            <li>home</li>
+            <li>menu</li>
+            <li>link</li>
+            <li>about</li>
+            <li>contact</li>
+
+        </ul>
+        <div class="toggle">☰</div>
+    </nav>
+    <script>
+        const toggle=document.querySelector(".toggle")
+        const menu=document.querySelector(".dropdown")
+        toggle.addEventListener("click",function(){
+            menu.classList.toggle("active")
+        })
+
+        
+    </script>
+    
+</body>
+</html>
