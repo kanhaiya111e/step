@@ -1,4 +1,3 @@
-<!--create a login panel with css and html and js-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,6 +115,65 @@
             text-align: center;
            
         }
+        @media(max-width:1000px)
+        {
+            .container
+            {
+                width: 80%;
+            }
+            .block
+            {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+            }
+            .loginbtn
+            {
+                width: 80%;
+            }
+            .signin input ,.signup input
+            {
+                width: 95%;
+            }
+            
+
+        }
+        @media(max-width:600px)
+{
+    .container
+    {
+        height: 80%;
+    }
+
+    .block
+    {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        transition: transform 1s ease;
+    }
+    .block.left{
+        transform: translateY(100%);
+    }
+    .block.right
+    {
+        transform: translateY(0%);
+    }
+
+    .maincontainer
+    {
+        flex-direction: column;
+    }
+
+    .signin,
+    .signup
+    {
+        width: 100%;
+        height: 50%;
+    }
+
+}
+
 
         
     </style>
