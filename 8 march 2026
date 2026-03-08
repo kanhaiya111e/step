@@ -1,0 +1,170 @@
+<!--create a login panel with css and html and js-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            border: 2px solid gray;
+            height: 60%;
+            width: 80%;
+            border-radius: 20px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            padding: 5px;
+            
+        
+        }
+        .maincontainer
+        {
+            background:darkgray;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            border: 2px solid black;
+            border-radius: 20px;
+
+        }
+
+        .block
+        {
+            position: absolute;
+            top: 1%;
+            left: 1%;
+            background: #000;
+            height:98%;
+            width: 48%;
+          
+            border-radius:20px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            transition: transform 1s ease;
+            z-index: 10;
+        }
+                
+        .block.right
+        {
+            transform: translateX(105%);
+        }
+        .block.left
+        {
+            transform: translateX(-1%);
+        }
+        .loginbtn
+        {
+            width: 25%;
+            height: 8%;
+
+        }
+        .signup
+        {
+            
+            height:100%;
+           
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .signup input
+        {
+            width: 80%;
+            height: 10%;
+            font-size: 1.5rem;
+            border-radius: 20px;
+           text-align: center;
+        }
+        .signin
+        {
+            height:100%;
+            
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+         
+        }
+                .signin input
+        {
+            width: 80%;
+            height: 10%;
+            font-size: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+                   
+    <div class="container">
+        <div class="block">
+            <button class="loginbtn" id="signin">sign-in</button>
+            <button class="loginbtn" id="signup">sign-up</button>
+        </div>
+        <div class="maincontainer">
+    
+        <div class="signin">
+            <input type="text" placeholder="username">
+            <input type="email" placeholder="example@org.com">
+            <input type="password" placeholder="password">
+
+        </div>
+
+        <div class="signup">           
+             <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+        </div>
+        </div>
+    </div>
+    <script>
+        let block=document.querySelector(".block")
+        let signin=document.getElementById("signin")
+        let signup=document.getElementById("signup")
+        let signupcontainer=document.querySelector(".signup")
+        signin.addEventListener("click",()=>{
+            block.classList.add("right")
+            block.classList.remove("left")
+
+
+
+
+        })
+        signup.addEventListener("click",()=>{
+            block.classList.add("left")
+            block.classList.remove("right")
+
+           
+
+
+        })
+    </script>
+
+    
+</body>
+</html>
