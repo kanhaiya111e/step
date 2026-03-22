@@ -1,0 +1,143 @@
+
+# MySQL Learning Diary
+
+## Day 3: CRUD Operations (Create, Read, Update, Delete)
+
+### Objective
+
+* Table mein data insert karna
+* Data retrieve (read) karna
+* Data update aur delete karna
+
+---
+
+## Concepts Learned
+
+### What is CRUD?
+
+* Create → Data insert karna
+* Read → Data dekhna
+* Update → Data change karna
+* Delete → Data remove karna
+
+---
+
+## Commands Practiced
+
+### Insert Data
+
+```sql id="5t9n2p"
+INSERT INTO students (id, name, age, marks)
+VALUES (1, 'Rahul', 20, 85.5);
+```
+
+Multiple rows insert:
+
+```sql id="l4y0sb"
+INSERT INTO students VALUES
+(2, 'Aman', 21, 78.0),
+(3, 'Neha', 19, 92.3);
+```
+
+---
+
+### Read Data
+
+```sql id="aqf6d0"
+SELECT * FROM students;
+```
+
+Specific columns:
+
+```sql id="dtrc3l"
+SELECT name, marks FROM students;
+```
+
+---
+
+### Update Data
+
+```sql id="t8w3e2"
+UPDATE students
+SET marks = 90
+WHERE id = 1;
+```
+
+---
+
+### Delete Data
+
+```sql id="xk2m9v"
+DELETE FROM students
+WHERE id = 2;
+```
+
+---
+
+## Practice Tasks
+
+### Task 1
+
+Students table mein 3 records insert karo
+
+```sql id="d4h8kp"
+INSERT INTO students VALUES
+(4, 'Karan', 22, 67.5),
+(5, 'Simran', 20, 88.0),
+(6, 'Priya', 21, 91.2);
+```
+
+---
+
+### Task 2
+
+Sirf naam aur marks display karo
+
+```sql id="0p8zre"
+SELECT name, marks FROM students;
+```
+
+---
+
+### Task 3
+
+Kisi ek student ke marks update karo
+
+```sql id="j9s2wl"
+UPDATE students
+SET marks = 95
+WHERE id = 4;
+```
+
+---
+
+### Task 4
+
+Ek record delete karo
+
+```sql id="c7m1qa"
+DELETE FROM students
+WHERE id = 5;
+```
+
+---
+
+## Challenges Faced
+
+* WHERE clause miss karne se pura data change/delete ho sakta hai
+* Update aur delete mein dhyaan dena zaroori hai
+
+---
+
+## Learning Outcome
+
+* Data insert, read, update aur delete karna aa gaya
+* SQL ka real use samajh aaya
+* Query likhne mein confidence increase hua
+
+---
+
+## Next Plan
+
+* Data filtering (WHERE clause)
+* Logical operators (AND, OR)
