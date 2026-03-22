@@ -1,0 +1,94 @@
+# MySQL Learning Diary
+
+## Day 1: Introduction to MySQL
+
+### Objective
+
+* MySQL ka basic concept samajhna
+* Database aur DBMS ka difference clear karna
+* Basic commands practice karna
+
+---
+
+## Concepts Learned
+
+### What is MySQL?
+
+MySQL ek Relational Database Management System (RDBMS) hai jo data ko tables (rows aur columns) ke form mein store karta hai.
+
+### Database vs DBMS
+
+* Database: Data ka structured collection
+* DBMS: Software jo database ko manage karta hai
+
+Example:
+MySQL ek DBMS hai jo databases ko handle karta hai.
+
+---
+
+## Setup
+
+* MySQL install kiya
+* MySQL command line ya Workbench open kiya
+
+---
+
+## Commands Practiced
+
+### Show all databases
+
+```sql
+SHOW DATABASES;
+```
+
+### Create a database
+
+```sql
+CREATE DATABASE school;
+```
+
+### Use a database
+
+```sql
+USE school;
+```
+
+### Delete a database
+
+```sql
+DROP DATABASE school;
+```
+
+---
+
+## Practice Tasks
+
+### Task 1
+
+Ek database create karo jiska naam `college` ho, use karo, aur phir delete karo.
+
+```sql
+CREATE DATABASE college;
+USE college;
+DROP DATABASE college;
+```
+
+---
+
+## Challenges Faced
+
+* Syntax yaad rakhna initially difficult tha
+* Commands likhte waqt small errors ho rahe the
+
+---
+
+## Learning Outcome
+
+* Database create, use aur delete karna aa gaya
+* MySQL environment ka basic flow samajh aaya
+
+---
+
+## Next Plan
+
+* Tables aur Data Types seekhna
