@@ -1,0 +1,129 @@
+# MySQL Learning Diary
+
+## Day 2: Tables and Data Types
+
+### Objective
+
+* Table create karna seekhna
+* Different data types samajhna
+* Constraints ka use karna
+
+---
+
+## Concepts Learned
+
+### What is a Table?
+
+Table ek structure hota hai jisme data rows aur columns ke form mein store hota hai.
+
+Example:
+Ek student table mein columns ho sakte hain:
+
+* id
+* name
+* age
+
+---
+
+### Data Types
+
+Common data types:
+
+* INT → integer values
+* VARCHAR(n) → text (n characters tak)
+* FLOAT → decimal numbers
+* DATE → date values
+
+---
+
+### Constraints
+
+Constraints data ko control karte hain:
+
+* NOT NULL → value empty nahi ho sakti
+* PRIMARY KEY → unique + not null
+
+---
+
+## Commands Practiced
+
+### Create Table
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    marks FLOAT
+);
+```
+
+---
+
+### View Table Structure
+
+```sql
+DESC students;
+```
+
+---
+
+### Delete Table
+
+```sql
+DROP TABLE students;
+```
+
+---
+
+## Practice Tasks
+
+### Task 1
+
+Ek table `employees` create karo with fields:
+
+* id (primary key)
+* name (not null)
+* salary (float)
+* join_date (date)
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    salary FLOAT,
+    join_date DATE
+);
+```
+
+---
+
+### Task 2
+
+Table structure check karo
+
+```sql
+DESC employees;
+```
+
+---
+
+## Challenges Faced
+
+* Data types choose karna confusing tha
+* Syntax mein brackets aur commas ka dhyaan rakhna pada
+
+---
+
+## Learning Outcome
+
+* Table create karna aa gaya
+* Data types ka basic understanding ho gaya
+* Constraints ka use samajh aaya
+
+---
+
+## Next Plan
+
+* Data insert karna (INSERT)
+* Data read karna (SELECT)
